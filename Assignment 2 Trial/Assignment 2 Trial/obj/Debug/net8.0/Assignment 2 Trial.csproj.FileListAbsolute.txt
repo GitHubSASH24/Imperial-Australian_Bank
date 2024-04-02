@@ -1,0 +1,14 @@
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.GeneratedMSBuildEditorConfig.editorconfig
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.AssemblyInfoInputs.cache
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.AssemblyInfo.cs
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.csproj.CoreCompileInputs.cache
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\bin\Debug\net8.0\Assignment 2 Trial.exe
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\bin\Debug\net8.0\Assignment 2 Trial.deps.json
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\bin\Debug\net8.0\Assignment 2 Trial.runtimeconfig.json
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\bin\Debug\net8.0\Assignment 2 Trial.dll
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\bin\Debug\net8.0\Assignment 2 Trial.pdb
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.dll
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\refint\Assignment 2 Trial.dll
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.pdb
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\Assignment 2 Trial.genruntimeconfig.cache
+F:\C# Visual Studio Code !st\Assignment 2 Trial\Assignment 2 Trial\obj\Debug\net8.0\ref\Assignment 2 Trial.dll
