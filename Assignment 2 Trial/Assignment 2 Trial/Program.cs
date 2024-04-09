@@ -1,14 +1,14 @@
-﻿using System;
+﻿using System; 
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main(string[] args) // entry point
     {
-        Bank bank = new Bank();
+        Bank bank = new Bank(); 
 
         while (true)
         {
-            Console.WriteLine("Welcome to Imperial Australian Bank");
+            Console.WriteLine("Welcome to Imperial Australian Bank");  //using writeline method to display main screen
             Console.WriteLine("1. Login");
             Console.WriteLine("2. Sign Up");
             Console.WriteLine("3. Exit");
