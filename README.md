@@ -72,7 +72,7 @@ To set up Visual Studio and get started with the banking software application, f
       - Select "Publish...".
       - Follow the prompts to choose a publishing target and configure publishing options.
 
-This integrated installation guide provides a comprehensive overview of setting up Visual Studio and creating a Console C# project, followed by instructions for downloading and extracting the banking software application. Adjustments may be needed based on your specific project requirements and Visual Studio version.]
+This integrated installation guide provides a comprehensive overview of setting up Visual Studio and creating a Console C# project, followed by instructions for downloading and extracting the banking software application. Adjustments may be needed based on your specific project requirements and Visual Studio version.
 
 ### For downloading the files directly
 To get started with the banking software application, follow these simple steps:
