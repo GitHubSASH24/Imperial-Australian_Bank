@@ -1,0 +1,14 @@
+C:\Users\subha\source\repos\Signup_Registration\bin\Debug\net8.0\Signup_Registration_Class.exe
+C:\Users\subha\source\repos\Signup_Registration\bin\Debug\net8.0\Signup_Registration_Class.deps.json
+C:\Users\subha\source\repos\Signup_Registration\bin\Debug\net8.0\Signup_Registration_Class.runtimeconfig.json
+C:\Users\subha\source\repos\Signup_Registration\bin\Debug\net8.0\Signup_Registration_Class.dll
+C:\Users\subha\source\repos\Signup_Registration\bin\Debug\net8.0\Signup_Registration_Class.pdb
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.AssemblyInfoInputs.cache
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.AssemblyInfo.cs
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.csproj.CoreCompileInputs.cache
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.dll
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\refint\Signup_Registration_Class.dll
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.pdb
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\Signup_Registration_Class.genruntimeconfig.cache
+C:\Users\subha\source\repos\Signup_Registration\obj\Debug\net8.0\ref\Signup_Registration_Class.dll
