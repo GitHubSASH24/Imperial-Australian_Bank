@@ -20,15 +20,13 @@ List of main features, including those enabled by the included files.
 This file contains [describe contents of zMainScreen.zip]. It was contributed by Eva.
 <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zMainScreen.zip" download>Download zMainScreen.zip</a>
 
-
-
 ### zSign_In_Code.zip (by Spencer)
 This file includes [describe contents of zSign_In_Code.zip]. It was contributed by Spencer.
-[Download zSign_In_Code.zip](link_to_download)
+<a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/blob/main/zSign_In_Code.zip" download>Download zSign_In_Code.zip</a>
 
 ### zSignup_Registration.zip (by Abdul S.H. Syed)
 This archive contains [describe contents of zSignup_Registration.zip]. It was contributed by Abdul S.H. Syed.
-[Download zSignup_Registration.zip](link_to_download)
+<a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/blob/main/zSignup_Registration.zip" download>Download zSignup_Registration.zip</a>
 
 ## Contributing
 Guidelines for contributing to the project.
