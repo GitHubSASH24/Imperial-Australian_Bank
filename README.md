@@ -79,9 +79,12 @@ To get started with the banking software application, follow these simple steps:
 
 1. **Download Required Files**:
    - Click on the following links to download the necessary zip files:
+   - These 3 are code modules of the actual code
      - <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zMainScreen.zip" download>zMainScreen.zip</a>
      - <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zSign_In_Code.zip" download>zSign_In_Code.zip</a>
      - <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zSignup_Registration.zip" download>zSignup_Registration.zip</a>
+   - This is for the overall code
+     - <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zISE102_S.ABDUL-M.EVA-R.SPENCER_A2.zip" download>zISE102_S.ABDUL-M.EVA-R.SPENCER_A2.zip</a>
      
 2. **Extract Zip Files**:
    - Once the zip files are downloaded, locate them in your downloads folder or the directory where your browser saves files.
@@ -176,16 +179,20 @@ These features collectively provide a comprehensive banking solution, enabling u
 ## File Inclusion
 
 ### zMainScreen.zip (by Eva)
-This file contains [describe contents of zMainScreen.zip]. It was contributed by Eva.
+This file contains the main menu module for the banking system. It was contributed by Eva.
 <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zMainScreen.zip" download>Download zMainScreen.zip</a>
 
 ### zSign_In_Code.zip (by Spencer)
-This file includes [describe contents of zSign_In_Code.zip]. It was contributed by Spencer.
+This file includes the login module for the banking system. It was contributed by Spencer.
 <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zSign_In_Code.zip" download>Download zSign_In_Code.zip</a>
 
 ### zSignup_Registration.zip (by Abdul S.H. Syed)
-This archive contains [describe contents of zSignup_Registration.zip]. It was contributed by Abdul S.H. Syed.
+This archive contains the registration module for the banking system. It was contributed by Abdul S.H. Syed.
 <a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zSignup_Registration.zip" download>Download zSignup_Registration.zip</a>
+
+### zISE102_S.ABDUL-M.EVA-R.SPENCER_A2.zip (by Abdul S.H. Syed)
+This archive contains the three modules into one compiled module for a banking system. It was contributed by Abdul S.H. Syed.
+<a href="https://github.com/GitHubSASH24/Imperial-Australian_Bank/raw/main/zISE102_S.ABDUL-M.EVA-R.SPENCER_A2.zip" download>Download zISE102_S.ABDUL-M.EVA-R.SPENCER_A2.zip</a>
 
 ## Contributing
 Thank you for your interest in contributing to the banking software project! We welcome contributions from the community to help improve and enhance the functionality of our application. Here are some guidelines to follow when contributing:
