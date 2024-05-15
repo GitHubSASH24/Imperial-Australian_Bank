@@ -267,7 +267,7 @@ class Program
         bool loggedIn = false; // Assume some login mechanism here to set loggedIn to true upon successful login
 
         // Adding dummy user data for testing
-        myBank.AddDummyUser("Joe.Doe", "Password123");
+        myBank.AddDummyUser("Joe.Doe", "Password!123");
 
         while (true)
         {
