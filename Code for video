@@ -1,0 +1,336 @@
+using System.Text.RegularExpressions;
+using System.Text;
+public class Bank
+{
+    private List<UserAccount> accounts; 
+    private decimal balance; 
+
+    public Bank()
+    {
+        accounts = new List<UserAccount>(); 
+        balance = 0; 
+
+    }
+
+    public void SignUp()
+    {
+        Console.WriteLine("".PadRight(50, '='));
+        Console.WriteLine("Welcome to the registration process".PadLeft(27));
+        Console.WriteLine("".PadRight(50, '-'));
+
+        Console.Write("Enter your first name: ");
+        string firstName = Console.ReadLine();
+
+        Console.Write("Enter your last name: ");
+        string lastName = Console.ReadLine();
+
+        Console.Write("Enter your email address: ");
+        string email = Console.ReadLine();
+
+        Console.Write("Enter your phone number: ");
+        string phone = Console.ReadLine();
+
+        Console.Write("Enter your desired username: ");
+        string username = Console.ReadLine();
+
+        string password = null;
+        bool passwordValid = false;
+        while (!passwordValid)
+        {
+            Console.WriteLine("Do you want to generate a password? (yes/no)");
+            string response = Console.ReadLine().ToLower();
+
+            if (response == "yes")
+            {
+                try
+                {
+                    password = PasswordGenerator.GeneratePassword(8);
+                    Console.WriteLine("Generated Password: " + password);
+                    passwordValid = true;
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+            else if (response == "no")
+            {
+                Console.WriteLine("Please set a custom password:");
+                Console.WriteLine(GetPasswordRequirements());
+                Console.Write("Enter your password: ");
+                password = Console.ReadLine();
+
+                if (IsPasswordValid(password))
+                {
+                    passwordValid = true;
+                }
+                else
+                {
+                    Console.WriteLine("Password does not meet the requirements. Please try again.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid response. Please enter 'yes' or 'no'.");
+            }
+
+
+
+        }
+
+        string[] userInputs = { firstName, lastName, email, phone, username, password };
+
+        if (accounts.Exists(acc => acc.Email == email))
+        {
+            Console.WriteLine("Email already registered.");
+            return;
+        }
+
+        UserAccount newUser = new UserAccount(firstName, lastName, email, phone, username, password);
+        accounts.Add(newUser);
+
+        Console.WriteLine("Sign up successful.");
+
+        Console.WriteLine("\nYour credentials:");
+        Console.WriteLine("".PadRight(30, '*'));
+        Console.WriteLine("".PadRight(30, '*'));
+        Console.WriteLine($"First Name: {userInputs[0]}");
+        Console.WriteLine($"Last Name: {userInputs[1]}");
+        Console.WriteLine($"Email: {userInputs[2]}");
+        Console.WriteLine($"Phone: {userInputs[3]}");
+        Console.WriteLine($"Username: {userInputs[4]}");
+        Console.WriteLine($"Password: {userInputs[5]}");
+
+        Console.WriteLine($"\nWelcome to Imperial Australian Bank, {username}!");
+        Console.WriteLine("".PadRight(50, '='));
+
+    }
+
+    public bool Login(string username, string password)
+    {
+        UserAccount user = accounts.Find(acc => acc.Username == username && acc.Password == password);
+        return user != null;
+    }
+
+    public void AddDummyUser(string username, string password)
+    {
+        accounts.Add(new UserAccount("Joe", "Doe", "joe@example.com", "1234567890", username, password));
+    }
+
+    private static bool IsPasswordValid(string password)
+    {
+        return password.Length >= 8 &&
+               Regex.IsMatch(password, "[A-Za-z]") && 
+               Regex.IsMatch(password, "[0-9]") && 
+               Regex.IsMatch(password, "[!@#$%^&*]"); 
+    }
+
+    private string GetPasswordRequirements()
+    {
+        return "Password must be at least 8 characters long and contain at least one alphabetical character, one numerical character, and one special character.";
+    }
+
+    public void Deposit()
+    {
+        Console.WriteLine("Enter the amount to deposit:");
+        if (decimal.TryParse(Console.ReadLine(), out decimal amount) && amount >= 0)
+        {
+            balance += amount;
+            Console.WriteLine($"Deposit successful. Updated balance: ${balance}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a non-negative numerical value.");
+        }
+    }
+
+    public void Withdraw()
+    {
+        Console.WriteLine("Enter the amount to withdraw:");
+        if (decimal.TryParse(Console.ReadLine(), out decimal amount) && amount >= 0)
+        {
+            if (balance - amount >= 0)
+            {
+                balance -= amount;
+                Console.WriteLine($"Withdrawal successful. Updated balance: ${balance:F2}");
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds available.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a non-negative numerical value for withdrawal.");
+        }
+    }
+
+
+    public void ViewBalance()
+    {
+        Console.WriteLine($"Your current balance is ${balance:F2}");
+    }
+}
+
+public class UserAccount
+{
+    public string FirstName { get; }
+    public string LastName { get; }
+    public string Email { get; }
+    public string Phone { get; }
+    public string Username { get; }
+    public string Password { get; }
+
+    public UserAccount(string firstName, string lastName, string email, string phone, string username, string password)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Email = email;
+        Phone = phone;
+        Username = username;
+        Password = password;
+    }
+}
+
+public class PasswordGenerator
+{
+    private const string UppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private const string LowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    private const string DigitChars = "0123456789";
+    private const string SpecialChars = "!@#$%^&*()-_=+";
+
+    private static readonly Random random = new Random();
+
+    public static string GeneratePassword(int length)
+    {
+        string charPool = UppercaseChars + LowercaseChars + DigitChars + SpecialChars;
+
+        var passwordBuilder = new StringBuilder();
+
+        for (int i = 0; i < length; i++)
+        {
+            passwordBuilder.Append(charPool[random.Next(charPool.Length)]);
+        }
+
+        return ShuffleString(passwordBuilder.ToString());
+    }
+
+    private static string ShuffleString(string str)
+    {
+        char[] chars = str.ToCharArray();
+        for (int i = 0; i < chars.Length; i++)
+        {
+            int j = random.Next(i, chars.Length);
+            char temp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = temp;
+        }
+        return new string(chars);
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Bank myBank = new Bank();
+
+        bool loggedIn = false;
+
+        myBank.AddDummyUser("Joe.Doe", "Password!123");
+
+        while (true)
+        {
+
+
+            if (!loggedIn) 
+            {
+                Console.WriteLine("".PadRight(50, '='));
+                Console.WriteLine("Welcome to Imperial Australian Bank".PadLeft(30));
+                Console.WriteLine("".PadRight(50, '-'));
+                Console.WriteLine("1. Login");
+                Console.WriteLine("2. Sign Up");
+                Console.WriteLine("3. Exit");
+                Console.Write("Choose an option: ");
+
+                int option = Convert.ToInt32(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        Console.Write("Enter username: ");
+                        string usernameLogin = Console.ReadLine();
+                        Console.Write("Enter password: ");
+                        string passwordLogin = Console.ReadLine();
+                        if (myBank.Login(usernameLogin, passwordLogin))
+                        {
+                            Console.WriteLine($"Welcome to Imperial Australian Bank {usernameLogin}!");
+                            loggedIn = true;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Login failed. Invalid username or password.");
+                        }
+                        break;
+
+                    case 2:
+                        myBank.SignUp();
+                        loggedIn = true;
+                        break;
+
+
+
+                    case 3:
+                        Console.WriteLine("Thank you for using Imperial Australian Bank. Goodbye!");
+                        Environment.Exit(0);
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid option. Please choose again.");
+                        break;
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("".PadRight(50, '='));
+                Console.WriteLine("1. Deposit");
+                Console.WriteLine("2. Withdraw");
+                Console.WriteLine("3. View Balance");
+                Console.WriteLine("4. Log Out");
+                Console.Write("Enter your choice: ");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1: 
+                        myBank.Deposit();
+                        break;
+                    case 2:
+                        myBank.Withdraw();
+                        break;
+                    case 3:
+                        myBank.ViewBalance();
+                        break;
+
+
+                    case 4:
+                        loggedIn = false;
+                        break;
+
+
+                    default:
+                        Console.WriteLine("Invalid choice. Please choose again.");
+                        break;
+
+
+
+                }
+            }
+
+        }
+    }
+}
